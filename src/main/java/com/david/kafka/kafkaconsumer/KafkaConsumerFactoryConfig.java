@@ -31,7 +31,7 @@ public class KafkaConsumerFactoryConfig {
         props.put(SslConfigs.SSL_KEYSTORE_TYPE_CONFIG, "PEM");
         props.put(SslConfigs.SSL_KEYSTORE_CERTIFICATE_CHAIN_CONFIG, System.getenv("USER_CRT"));
         props.put(SslConfigs.SSL_KEYSTORE_KEY_CONFIG, System.getenv("USER_KEY"));
-        return new DefaultKafkaConsumerFactory<String, String>(props);
+        return new DefaultKafkaConsumerFactory<>(props);
     }
 
     @Bean
